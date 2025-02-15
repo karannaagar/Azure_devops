@@ -18,8 +18,7 @@ variables:
 
   # Agent VM image name
 pool: 
-  name: 'test'
-  vmImageName: 'windowsmachine'
+  name: test
 
 stages:
 - stage: Build
