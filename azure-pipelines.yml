@@ -28,8 +28,12 @@ stages:
   jobs:
   - job: Build
     displayName: Build
+    # pool:
+    #   vmImage: $(vmImageName)
     pool:
-      vmImage: $(vmImageName)
+      name: test
+      demands:
+      - agent.name -equals windowsmachine 
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
