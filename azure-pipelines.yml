@@ -17,8 +17,10 @@ variables:
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
-pool: 
+pool:
   name: test
+  demands:
+   - agent.name -equals windowsmachine  
 
 stages:
 - stage: Build
