@@ -19,7 +19,8 @@ variables:
   imagePullSecret: 'azure898registry1603e6c8-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+pool: 
+  name: test
 
 
 stages:
@@ -28,8 +29,8 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: $(vmImageName)
+    pool: 
+      name: test
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -51,8 +52,8 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
+    pool: 
+      name: test
     environment: 'karannaagarAzuredevops-1299.demonamespace'
     strategy:
       runOnce:
