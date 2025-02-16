@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: karannaagarazuredevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karannaagarazuredevops
+  template:
+    metadata:
+      labels:
+        app: karannaagarazuredevops 
+    spec:
+      containers:
+        - name: karannaagarazuredevops 
+          image: azure898registry.azurecr.io/karannaagarazuredevops
+          ports:
+          - containerPort: 80
