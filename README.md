@@ -1,7 +1,5 @@
 # Azure_devops
 
-# Azure Devops
-
 This repo will be an EXAMPLE to How to create Dockerimage using Azure Devops and deploy in AKS as well.
 
 
