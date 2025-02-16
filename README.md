@@ -35,7 +35,7 @@ stages:
 
 ```
 
-
+- Once your build is completed. Azure Pushes the Manifest directory to the Github Repo. This will contain "service" , "deployment" spec files.
 
 
 
